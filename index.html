@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropShare - مشاركة ملفات سريعة</title>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #f0f2f5; text-align: center; padding: 20px; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .peers-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 30px 0; }
+        .peer-card { background: #e3f2fd; padding: 20px; border-radius: 8px; border: 2px dashed #2196f3; cursor: pointer; min-width: 120px; }
+        .peer-card:hover { background: #bbdefb; }
+        #status { color: #666; margin-top: 20px; font-weight: bold; }
+        input[type="file"] { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>مشاركة الملفات المحلية (P2P)</h1>
+        <p>الأجهزة المتصلة معك على نفس الشبكة:</p>
+        
+        <div class="peers-list" id="peersList">
+            <!-- سيتم إضافة الأجهزة هنا عبر الجافا سكريبت -->
+        </div>
+
+        <input type="file" id="fileInput">
+        <div id="status">جاري الاتصال بخادم الإشارات...</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
